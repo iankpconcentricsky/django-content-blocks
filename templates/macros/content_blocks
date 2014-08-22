@@ -1,0 +1,8 @@
+{% macro content_blocks(object) %}
+
+{% for generic_block in object.content_blocks.all() %}
+    {% set block = generic_block.content_block %}
+    {% include block.template_name %}
+{% endfor %}
+
+{% endmacro %}

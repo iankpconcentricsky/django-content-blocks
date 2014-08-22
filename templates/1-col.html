@@ -1,0 +1,18 @@
+<section class="block one-column">
+    {% if block.image_position == 'top' %}
+        <img src="{{block.image.url}}" alt="{{block.image.alt}}" />
+    {% endif %}
+    {% if block.image_position == 'left' %}
+        <img src="{{block.image.url}}" alt="{{block.image.alt}}" class="block-image-left" style="float: left"/>
+    {% endif %}
+    {% if block.image_position == 'right' %}
+        <img src="{{block.image.url}}" alt="{{block.image.alt}}" class="block-image-right" style="float: right"/>
+    {% endif %}
+	<div class="col1">
+		<h3>{{block.title}}</h3>
+		{{block.body|safe}}
+	</div>
+    {% if block.image_position == 'bottom' %}
+        <img src="{{block.image.url}}" alt="{{block.image.alt}}" />
+    {% endif %}
+</section>

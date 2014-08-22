@@ -1,0 +1,13 @@
+<section class="block quote">
+	<blockquote>
+        “{{block.body}}”
+        <cite>
+            {% if block.author %}
+                -{{block.author}}
+            {% endif %}
+            {% if block.source %}
+                ({{block.source}})
+            {% endif %}
+        </cite>
+	</blockquote>
+</section>
